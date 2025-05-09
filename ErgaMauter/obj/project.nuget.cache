@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "64A2hQlvpec=",
+  "success": true,
+  "projectFilePath": "/Users/dustin/Library/Application Support/Terraria/tModLoader/ModSources/ErgaMauter/ErgaMauter.csproj",
+  "expectedPackageFiles": [
+    "/Users/dustin/.nuget/packages/tmodloader.codeassist/0.1.5/tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}
