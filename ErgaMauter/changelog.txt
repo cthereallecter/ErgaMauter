@@ -1,2 +1,3 @@
 05/09/2025 v0.1.0.0:
+    - Created Erga Mauter Trials
     - Added Flaming Fury Sword
