@@ -16,7 +16,7 @@ namespace ErgaMauter.Content.Projectiles.Magic
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Magic;
             Projectile.penetrate = 5;
-            Projectile.timeLeft = 60;
+            Projectile.timeLeft = 30;
             Projectile.tileCollide = false;
             Projectile.ignoreWater = true;
 
@@ -59,7 +59,7 @@ namespace ErgaMauter.Content.Projectiles.Magic
                 Vector2 target = new Vector2(Projectile.ai[0], Projectile.ai[1]);
                 Vector2 direction = target - Projectile.Center;
                 direction.Normalize();
-                Projectile.velocity = direction * 20f;
+                Projectile.velocity = direction * 40f;
                 Projectile.localAI[0] = 1f;
             }
 

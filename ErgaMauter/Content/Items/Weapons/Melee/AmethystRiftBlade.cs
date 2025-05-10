@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 using Microsoft.Xna.Framework;
 
 using Terraria;
@@ -26,7 +28,7 @@ namespace ErgaMauter.Content.Items.Weapons.Melee
                                 silver: 65,
                                 copper: 43
                             );    // Item sell value
-            
+
             // Combat Properties
             Item.damage = 26;                           // Base damage 
             Item.DamageType = DamageClass.Melee;        // Damage type (Melee, Ranged, Magic, etc.)
@@ -35,15 +37,15 @@ namespace ErgaMauter.Content.Items.Weapons.Melee
             Item.useAnimation = Item.useTime;                     // Animation duration - should match useTime for most weapons
             Item.knockBack = 6f;                        // Knockback power
             Item.crit = 6;                              // Critical strike chance bonus (base is 4%)
-            
+
             // Sound and Visual Properties
             Item.UseSound = SoundID.Item1;              // Sound when used
             Item.autoReuse = true;                      // Auto-reuse (hold to keep swinging)
-            
+
             // Projectile Properties (if the sword shoots projectiles)
             // Item.shoot = ProjectileID.Fireball;         // No projectile by default - change for projectile swords
             // Item.shootSpeed = 3f;                       // Speed of projectile if applicable
-            
+
             // Other Properties
             Item.scale = 1.3f;                            // Size scaling of the weapon (visual only)
             Item.maxStack = 1;                          // Most weapons can't stack
@@ -58,9 +60,9 @@ namespace ErgaMauter.Content.Items.Weapons.Melee
             {
                 // Create dust at a random position within the hitbox
                 Dust.NewDust(
-                    new Vector2(hitbox.X, hitbox.Y), 
-                    hitbox.Width, 
-                    hitbox.Height, 
+                    new Vector2(hitbox.X, hitbox.Y),
+                    hitbox.Width,
+                    hitbox.Height,
                     DustID.PurpleTorch,                       // Change dust type as needed
                     0f, 0f, 0, Color.Purple, 1f
                 );
@@ -83,7 +85,7 @@ namespace ErgaMauter.Content.Items.Weapons.Melee
             primaryRecipe.AddIngredient(ItemID.DemoniteBar, 8);  // 8 Demonite Bars
             primaryRecipe.AddTile(TileID.Anvils);                 // Requires an Anvil
             primaryRecipe.Register();
-            
+
             // Alternative recipe with Tungsten and Tissue Samples
             Recipe secondaryRecipe = CreateRecipe();
             secondaryRecipe.AddIngredient(ItemID.Amethyst, 8);      // 8 Amethyst gems
@@ -110,7 +112,7 @@ namespace ErgaMauter.Content.Items.Weapons.Melee
             }
         }
         */
-        
+
         /*
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {

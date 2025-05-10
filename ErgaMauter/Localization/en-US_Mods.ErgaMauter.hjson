@@ -1,22 +1,41 @@
 Items: {
 	AmethystRiftBlade: {
 		DisplayName: Amethyst Rift Blade
-		Tooltip: ""
+		Tooltip:
+			'''
+			Inflicts Bleeding on hit
+			Emits purple particles when swung
+			'''
 	}
 
 	ElementalBeamStaff: {
 		DisplayName: Elemental Beam Staff
-		Tooltip: ""
+		Tooltip:
+			'''
+			Summons fire and ice beams from the sky
+			Targets cursor location with dual elemental attacks
+			'''
 	}
 
 	FlamingFury: {
 		DisplayName: Flaming Fury
-		Tooltip: ""
+		Tooltip:
+			'''
+			Sets enemies on fire
+			Swings quickly with fiery particles
+			'''
 	}
 
-	StuddedHoneycomb: {
-		DisplayName: Studded Honeycomb
-		Tooltip: ""
+	StuddedBeePlate: {
+		DisplayName: Studded Bee Plate
+		Tooltip:
+			'''
+			Increases defense by 8
+			When worn with Honey Comb:
+			- Enhances healing effects
+			- Increases bee spawn rate
+			- Creates a honey aura
+			'''
 	}
 }
 

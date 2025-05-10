@@ -1,9 +1,11 @@
+using System.Collections.Generic;
+
 using Microsoft.Xna.Framework;
+
 using Terraria;
+using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
-using System.Collections.Generic;
 
 namespace ErgaMauter.Content.Items.Accessories
 {
@@ -21,7 +23,8 @@ namespace ErgaMauter.Content.Items.Accessories
             Item.rare = ItemRarityID.Blue;
             Item.value = Item.sellPrice(
                                 gold: 1,
-                                silver: 75
+                                silver: 75,
+                                copper: 32
                             );
             Item.accessory = true;
         }
@@ -68,11 +71,6 @@ namespace ErgaMauter.Content.Items.Accessories
                     beeDust.noGravity = true;
                 }
             }
-        }
-
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
-        {
-            tooltips.Add(new TooltipLine(Mod, "Effect", "Grants +8 defense\nIf Honey Comb is equipped:\n- Boosts healing\n- Spawns more bees\n- Visual honey aura"));
         }
     }
 }

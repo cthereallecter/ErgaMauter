@@ -1,9 +1,9 @@
-// v0.1.0.1
-using ErgaMauter.Content.Items.Accessories;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
+
+using ErgaMauter.Content.Items.Accessories;
 
 namespace ErgaMauter.Content.NPCs
 {

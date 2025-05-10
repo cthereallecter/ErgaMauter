@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 using Microsoft.Xna.Framework;
 
 using Terraria;
@@ -26,10 +28,10 @@ namespace ErgaMauter.Content.Items.Weapons.Magic
                                 copper: 83
                             );
 
-            Item.damage = 49;
+            Item.damage = 37;
             Item.DamageType = DamageClass.Magic;
             Item.useStyle = ItemUseStyleID.HoldUp;
-            Item.useTime = 22;
+            Item.useTime = 8;
             Item.useAnimation = Item.useTime;
             Item.knockBack = 7.2f;
             Item.crit = 8;
