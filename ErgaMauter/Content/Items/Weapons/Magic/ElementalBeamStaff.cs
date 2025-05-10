@@ -20,22 +20,26 @@ namespace ErgaMauter.Content.Items.Weapons.Magic
             Item.width = 32;
             Item.height = 32;
             Item.rare = ItemRarityID.Orange;
-            Item.value = Item.sellPrice(gold: 1);
+            Item.value = Item.sellPrice(
+                                gold: 1,
+                                silver: 42,
+                                copper: 83
+                            );
 
-            Item.damage = 34;
+            Item.damage = 49;
             Item.DamageType = DamageClass.Magic;
             Item.useStyle = ItemUseStyleID.HoldUp;
-            Item.useTime = 30;
-            Item.useAnimation = 30;
-            Item.knockBack = 4f;
-            Item.crit = 4;
+            Item.useTime = 22;
+            Item.useAnimation = Item.useTime;
+            Item.knockBack = 7.2f;
+            Item.crit = 8;
 
             Item.UseSound = SoundID.Item20;
             Item.autoReuse = true;
 
             Item.shoot = ModContent.ProjectileType<Projectiles.Magic.FireBeam>();
             Item.shootSpeed = 0f; // Not used since beam spawns from sky
-            Item.mana = 10;
+            Item.mana = 5;
 
             Item.scale = 1.3f;                            // Size scaling of the weapon (visual only)
             Item.maxStack = 1;                          // Most weapons can't stack
@@ -69,12 +73,12 @@ namespace ErgaMauter.Content.Items.Weapons.Magic
 
         public override void AddRecipes()
         {
-            Recipe baseRecipe = CreateRecipe();
-            baseRecipe.AddIngredient(ItemID.PlatinumBar, 8);
-            baseRecipe.AddIngredient(ItemID.FrostCore);
-            baseRecipe.AddIngredient(ItemID.HellstoneBar, 3);
-            baseRecipe.AddTile(TileID.MythrilAnvil);
-            baseRecipe.Register();
+            Recipe primaryRecipe = CreateRecipe();
+            primaryRecipe.AddIngredient(ItemID.PlatinumBar, 8);
+            primaryRecipe.AddIngredient(ItemID.FrostCore);
+            primaryRecipe.AddIngredient(1354); // Flask of Fire internal id
+            primaryRecipe.AddTile(TileID.MythrilAnvil);
+            primaryRecipe.Register();
 
             Recipe testRecipe = CreateRecipe();
             testRecipe.AddIngredient(ItemID.Wood, 8);

@@ -21,13 +21,17 @@ namespace ErgaMauter.Content.Items.Weapons.Melee
             Item.width = 32;                            // Hitbox width of the item
             Item.height = 32;                           // Hitbox height of the item
             Item.rare = ItemRarityID.Blue;              // Item rarity
-            Item.value = Item.sellPrice(silver: 35);    // Item sell value
+            Item.value = Item.sellPrice(
+                                gold: 1,
+                                silver: 84,
+                                copper: 37
+                            );    // Item sell value
             
             // Combat Properties
-            Item.damage = 20;                           // Base damage 
+            Item.damage = 31;                           // Base damage 
             Item.DamageType = DamageClass.Melee;        // Damage type (Melee, Ranged, Magic, etc.)
             Item.useStyle = ItemUseStyleID.Swing;       // Animation style (Swing is common for swords)
-            Item.useTime = 20;                          // Speed of use - lower is faster
+            Item.useTime = 14;                          // Speed of use - lower is faster
             Item.useAnimation = 20;                     // Animation duration - should match useTime for most weapons
             Item.knockBack = 6f;                        // Knockback power
             Item.crit = 6;                              // Critical strike chance bonus (base is 4%)

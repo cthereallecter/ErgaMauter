@@ -1,8 +1,15 @@
 v0.1.0.1:
-    - Added Elemental Beam Staff
+    - Added [Elemental Beam Staff]
+    - Reworked [Studded Honeycomb] into
+        [Studded Bee Plate]
+    - Added bonus effects when
+        [Honey Comb] and [Studded Bee Plate]
+        are worn together.
+    - Reworked values:
+        recipes, drop tables, coins, etc...
 
 v0.1.0.0:
     - Created Erga Mauter Trials
-    - Added Flaming Fury Sword
-    - Added Amethyst Rift Blade
-    - Added Studded Honeycomb Accessory
+    - Added [Flaming Fury Sword]
+    - Added [Amethyst Rift Blade]
+    - Added [Studded Honeycomb] accessory

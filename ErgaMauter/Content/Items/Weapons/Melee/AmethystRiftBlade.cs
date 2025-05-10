@@ -21,14 +21,18 @@ namespace ErgaMauter.Content.Items.Weapons.Melee
             Item.width = 32;                            // Hitbox width of the item
             Item.height = 32;                           // Hitbox height of the item
             Item.rare = ItemRarityID.Blue;              // Item rarity
-            Item.value = Item.sellPrice(silver: 35);    // Item sell value
+            Item.value = Item.sellPrice(
+                                gold: 2,
+                                silver: 65,
+                                copper: 43
+                            );    // Item sell value
             
             // Combat Properties
-            Item.damage = 20;                           // Base damage 
+            Item.damage = 26;                           // Base damage 
             Item.DamageType = DamageClass.Melee;        // Damage type (Melee, Ranged, Magic, etc.)
             Item.useStyle = ItemUseStyleID.Swing;       // Animation style (Swing is common for swords)
-            Item.useTime = 20;                          // Speed of use - lower is faster
-            Item.useAnimation = 20;                     // Animation duration - should match useTime for most weapons
+            Item.useTime = 17;                          // Speed of use - lower is faster
+            Item.useAnimation = Item.useTime;                     // Animation duration - should match useTime for most weapons
             Item.knockBack = 6f;                        // Knockback power
             Item.crit = 6;                              // Critical strike chance bonus (base is 4%)
             
@@ -73,20 +77,20 @@ namespace ErgaMauter.Content.Items.Weapons.Melee
         public override void AddRecipes()
         {
             // Updated recipe using amethyst and materials that make sense for a rift blade
-            Recipe shadowScaleRecipe = CreateRecipe();
-            shadowScaleRecipe.AddIngredient(ItemID.Amethyst, 8);      // 8 Amethyst gems
-            shadowScaleRecipe.AddIngredient(ItemID.ShadowScale, 5);   // 5 Shadow Scales for the rift property
-            shadowScaleRecipe.AddIngredient(ItemID.DemoniteBar, 8);  // 8 Demonite Bars
-            shadowScaleRecipe.AddTile(TileID.Anvils);                 // Requires an Anvil
-            shadowScaleRecipe.Register();
+            Recipe primaryRecipe = CreateRecipe();
+            primaryRecipe.AddIngredient(ItemID.Amethyst, 8);      // 8 Amethyst gems
+            primaryRecipe.AddIngredient(ItemID.ShadowScale, 5);   // 5 Shadow Scales for the rift property
+            primaryRecipe.AddIngredient(ItemID.DemoniteBar, 8);  // 8 Demonite Bars
+            primaryRecipe.AddTile(TileID.Anvils);                 // Requires an Anvil
+            primaryRecipe.Register();
             
             // Alternative recipe with Tungsten and Tissue Samples
-            Recipe tissueSampleRecipe = CreateRecipe();
-            tissueSampleRecipe.AddIngredient(ItemID.Amethyst, 8);      // 8 Amethyst gems
-            tissueSampleRecipe.AddIngredient(ItemID.TissueSample, 5);  // 5 Tissue Samples (Crimson equivalent)
-            tissueSampleRecipe.AddIngredient(ItemID.DemoniteBar, 8);  // 8 Demonite Bars
-            tissueSampleRecipe.AddTile(TileID.Anvils);                 // Requires an Anvil
-            tissueSampleRecipe.Register();
+            Recipe secondaryRecipe = CreateRecipe();
+            secondaryRecipe.AddIngredient(ItemID.Amethyst, 8);      // 8 Amethyst gems
+            secondaryRecipe.AddIngredient(ItemID.TissueSample, 5);  // 5 Tissue Samples (Crimson equivalent)
+            secondaryRecipe.AddIngredient(ItemID.DemoniteBar, 8);  // 8 Demonite Bars
+            secondaryRecipe.AddTile(TileID.Anvils);                 // Requires an Anvil
+            secondaryRecipe.Register();
         }
 
         // Optional: Make the weapon have an aura when held or swing projectiles
