@@ -8,4 +8,9 @@ Items: {
 		DisplayName: Amethyst Rift Blade
 		Tooltip: ""
 	}
+
+	StuddedHoneycomb: {
+		DisplayName: Studded Honeycomb
+		Tooltip: ""
+	}
 }
