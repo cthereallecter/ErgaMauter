@@ -3,4 +3,4 @@ author = C. Lecter
 version = 0.1.0.1
 homepage = https://github.com/cthereallecter/ErgaMauter
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
-includeSource = true
+includeSource = false

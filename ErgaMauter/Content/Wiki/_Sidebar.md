@@ -1,7 +1,4 @@
 # Erga Mauter Trials
-
-![Version](https://img.shields.io/badge/v0.1.0.0-blue?style=flat-square)
-
 ## Navigation
 
 - [Home](Home)

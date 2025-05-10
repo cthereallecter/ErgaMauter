@@ -1,3 +1,6 @@
+v0.1.0.1:
+    - Added Elemental Beam Staff
+
 v0.1.0.0:
     - Created Erga Mauter Trials
     - Added Flaming Fury Sword

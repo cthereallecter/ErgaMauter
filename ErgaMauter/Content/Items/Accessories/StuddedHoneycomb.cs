@@ -17,8 +17,8 @@ namespace ErgaMauter.Content.Items.Accessories
         public override void SetDefaults()
         {
             // Basic item properties
-            Item.width = 40;
-            Item.height = 40;
+            Item.width = 28;
+            Item.height = 32;
             Item.value = Item.sellPrice(silver: 75);
             Item.rare = ItemRarityID.Blue; // Blue rarity
             Item.accessory = true; // This marks the item as an accessory

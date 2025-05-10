@@ -1,7 +1,11 @@
 Items: {
-
 	AmethystRiftBlade: {
 		DisplayName: Amethyst Rift Blade
+		Tooltip: ""
+	}
+
+	ElementalBeamStaff: {
+		DisplayName: Elemental Beam Staff
 		Tooltip: ""
 	}
 
@@ -14,4 +18,9 @@ Items: {
 		DisplayName: Studded Honeycomb
 		Tooltip: ""
 	}
+}
+
+Projectiles: {
+	FireBeam.DisplayName: Fire Beam
+	IceBeam.DisplayName: Ice Beam
 }
