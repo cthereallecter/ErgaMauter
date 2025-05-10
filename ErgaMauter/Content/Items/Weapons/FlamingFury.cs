@@ -72,19 +72,20 @@ namespace ErgaMauter.Content.Items.Weapons
 
         public override void AddRecipes()
         {
-            // Optional: Create a crafting recipe
-            Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.IronBar, 8);     // 8 Iron Bars required
-            recipe.AddIngredient(ItemID.Wood, 10);       // 10 Wood required
-            recipe.AddTile(TileID.Anvils);               // Requires an Anvil
-            recipe.Register();
-            
-            // Alternative recipe (for example, with copper instead of iron)
-            Recipe altRecipe = CreateRecipe();
-            altRecipe.AddIngredient(ItemID.CopperBar, 8);   // 8 Copper Bars required
-            altRecipe.AddIngredient(ItemID.Wood, 10);       // 10 Wood required
-            altRecipe.AddTile(TileID.Anvils);               // Requires an Anvil
-            altRecipe.Register();
+            // Recipe for players who haven't yet reached Hell
+            Recipe GoldBarRecipe = CreateRecipe();
+            GoldBarRecipe.AddIngredient(ItemID.MeteoriteBar, 10);  // 10 Meteorite Bars
+            GoldBarRecipe.AddIngredient(ItemID.Ruby, 3);           // 3 Rubies
+            GoldBarRecipe.AddIngredient(ItemID.GoldBar, 5);        // 5 Gold Bars
+            GoldBarRecipe.AddTile(TileID.Anvils);                  // Requires an Anvil
+            GoldBarRecipe.Register();
+
+            Recipe SilverBarRecipe = CreateRecipe();
+            SilverBarRecipe.AddIngredient(ItemID.MeteoriteBar, 10);  // 10 Meteorite Bars
+            SilverBarRecipe.AddIngredient(ItemID.Ruby, 3);           // 3 Rubies
+            SilverBarRecipe.AddIngredient(ItemID.SilverBar, 5);        // 5 Silver Bars
+            SilverBarRecipe.AddTile(TileID.Anvils);                  // Requires an Anvil
+            SilverBarRecipe.Register();
         }
 
         // Optional: Make the weapon have an aura when held or swing projectiles

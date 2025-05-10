@@ -58,7 +58,7 @@ namespace ErgaMauter.Content.Items.Weapons
                     hitbox.Width, 
                     hitbox.Height, 
                     DustID.Torch,                       // Change dust type as needed
-                    0f, 0f, 0, Color.Green, 1f
+                    0f, 0f, 0, Color.Purple, 1f
                 );
             }
         }
@@ -67,24 +67,26 @@ namespace ErgaMauter.Content.Items.Weapons
         {
             // Optional: Add effects when hitting an enemy
             // Example: Apply a buff or debuff
-            target.AddBuff(BuffID.Bleeding, 180);         // Set target on fire for 3 seconds (60 frames = 1 second)
+            target.AddBuff(BuffID.Bleeding, 180);         // Set target on bleeding for 3 seconds (60 frames = 1 second)
         }
 
         public override void AddRecipes()
         {
-            // Optional: Create a crafting recipe
-            Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.IronBar, 8);     // 8 Iron Bars required
-            recipe.AddIngredient(ItemID.Wood, 10);       // 10 Wood required
-            recipe.AddTile(TileID.Anvils);               // Requires an Anvil
-            recipe.Register();
+            // Updated recipe using amethyst and materials that make sense for a rift blade
+            Recipe ShadowScaleRecipe = CreateRecipe();
+            ShadowScaleRecipe.AddIngredient(ItemID.Amethyst, 8);      // 8 Amethyst gems
+            ShadowScaleRecipe.AddIngredient(ItemID.ShadowScale, 5);   // 5 Shadow Scales for the rift property
+            ShadowScaleRecipe.AddIngredient(ItemID.DemoniteBar, 8);  // 8 Demonite Bars
+            ShadowScaleRecipe.AddTile(TileID.Anvils);                 // Requires an Anvil
+            ShadowScaleRecipe.Register();
             
-            // Alternative recipe (for example, with copper instead of iron)
-            Recipe altRecipe = CreateRecipe();
-            altRecipe.AddIngredient(ItemID.CopperBar, 8);   // 8 Copper Bars required
-            altRecipe.AddIngredient(ItemID.Wood, 10);       // 10 Wood required
-            altRecipe.AddTile(TileID.Anvils);               // Requires an Anvil
-            altRecipe.Register();
+            // Alternative recipe with Tungsten and Tissue Samples
+            Recipe TissueSampleRecipe = CreateRecipe();
+            TissueSampleRecipe.AddIngredient(ItemID.Amethyst, 8);      // 8 Amethyst gems
+            TissueSampleRecipe.AddIngredient(ItemID.TissueSample, 5);  // 5 Tissue Samples (Crimson equivalent)
+            TissueSampleRecipe.AddIngredient(ItemID.DemoniteBar, 8);  // 8 Demonite Bars
+            TissueSampleRecipe.AddTile(TileID.Anvils);                 // Requires an Anvil
+            TissueSampleRecipe.Register();
         }
 
         // Optional: Make the weapon have an aura when held or swing projectiles

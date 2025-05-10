@@ -32,26 +32,29 @@ namespace ErgaMauter.Content.Items.Accessories
 
         public override void AddRecipes()
         {
-            // Create a recipe for crafting the Studded Honeycomb
-            Recipe recipe1 = CreateRecipe();
-            recipe1.AddIngredient(ItemID.IronBar, 5);  // Requires 5 Iron Bars
-            recipe1.AddIngredient(ItemID.StoneBlock, 10);  // Requires 10 Stone Blocks
-            recipe1.AddTile(TileID.Anvils);  // Crafted at an Anvil
-            recipe1.Register();
+            // Create a recipe for crafting the Studded Honeycomb - thematically appropriate materials
+            Recipe IronBarRecipe = CreateRecipe();
+            IronBarRecipe.AddIngredient(ItemID.Hive, 15);  // Requires Hive Blocks
+            IronBarRecipe.AddIngredient(ItemID.Stinger, 3);  // Requires Stingers from the jungle
+            IronBarRecipe.AddIngredient(ItemID.IronBar, 3);  // Requires 3 Iron Bars for the studs
+            IronBarRecipe.AddTile(TileID.Anvils);  // Crafted at an Anvil
+            IronBarRecipe.Register();
 
             // Alternative recipe with Lead instead of Iron
-            Recipe recipe2 = CreateRecipe();
-            recipe2.AddIngredient(ItemID.LeadBar, 5);  // Requires 5 Lead Bars
-            recipe2.AddIngredient(ItemID.StoneBlock, 10);  // Requires 10 Stone Blocks
-            recipe2.AddTile(TileID.Anvils);  // Crafted at an Anvil
-            recipe2.Register();
+            Recipe LeadBarRecipe = CreateRecipe();
+            LeadBarRecipe.AddIngredient(ItemID.Hive, 15);  // Requires Hive Blocks
+            LeadBarRecipe.AddIngredient(ItemID.Stinger, 3);  // Requires Stingers from the jungle
+            LeadBarRecipe.AddIngredient(ItemID.LeadBar, 3);  // Requires 3 Lead Bars for the studs
+            LeadBarRecipe.AddTile(TileID.Anvils);  // Crafted at an Anvil
+            LeadBarRecipe.Register();
 
-            // Alternative recipe with Tin instead of Iron
-            Recipe recipe3 = CreateRecipe();
-            recipe3.AddIngredient(ItemID.TinBar, 5);  // Requires 5 Lead Bars
-            recipe3.AddIngredient(ItemID.StoneBlock, 10);  // Requires 10 Stone Blocks
-            recipe3.AddTile(TileID.Anvils);  // Crafted at an Anvil
-            recipe3.Register();
+            // Alternative recipe with Lead instead of Iron
+            Recipe TinBarRecipe = CreateRecipe();
+            TinBarRecipe.AddIngredient(ItemID.Hive, 15);  // Requires Hive Blocks
+            TinBarRecipe.AddIngredient(ItemID.Stinger, 3);  // Requires Stingers from the jungle
+            TinBarRecipe.AddIngredient(ItemID.TinBar, 5);  // Requires 3 Tin Bars for the studs
+            TinBarRecipe.AddTile(TileID.Anvils);  // Crafted at an Anvil
+            TinBarRecipe.Register();
         }
     }
 }

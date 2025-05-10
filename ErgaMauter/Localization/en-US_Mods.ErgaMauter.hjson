@@ -1,11 +1,12 @@
 Items: {
-	FlamingFury: {
-		Tooltip: ""
-		DisplayName: Flaming Fury
-	}
 
 	AmethystRiftBlade: {
 		DisplayName: Amethyst Rift Blade
+		Tooltip: ""
+	}
+
+	FlamingFury: {
+		DisplayName: Flaming Fury
 		Tooltip: ""
 	}
 
