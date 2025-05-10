@@ -5,15 +5,16 @@
 ![Terraria](https://img.shields.io/badge/terraria-1.4.4.9-green)
 
 ## Overview
-Erga Mauter Trials is a content expansion mod for Terraria that introduces new weapons, accessories, and challenges to enhance your gameplay experience. The mod is currently in early development (v0.1.0.0) and more features will be added in future updates.
+Erga Mauter Trials is a content expansion mod for Terraria that introduces new weapons, accessories, and challenges to enhance your gameplay experience. The mod is currently in early development and more features will be added in future updates.
 
 ## Features
 - **New Weapons**:
+  - **Elemental Staff**: Fire and Ice living in harmony
   - **Flaming Fury**: A fiery sword that sets enemies ablaze
   - **Amethyst Rift Blade**: A powerful blade that causes bleeding
 
 - **New Accessories**:
-  - **Studded Honeycomb**: Provides a significant defense boost
+  - **Studded Bee Plate**: Provides a significant defense boost
 
 ## Installation
 1. Make sure you have [tModLoader](https://store.steampowered.com/app/1281930/tModLoader/) installed (compatible with v2025.3.3.1)
