@@ -9,7 +9,7 @@ Erga Mauter Trials is a content expansion mod for Terraria that introduces new w
 
 ## Features
 - **New Weapons**:
-  - **Elemental Staff**: Fire and Ice living in harmony
+  - **Elemental Beam Staff**: Fire and Ice living in harmony
   - **Flaming Fury**: A fiery sword that sets enemies ablaze
   - **Amethyst Rift Blade**: A powerful blade that causes bleeding
 
