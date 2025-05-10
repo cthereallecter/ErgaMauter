@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace ErgaMauter.Content.Items.Weapons
 {
-    public class FlamingFury : ModItem
+    public class AmethystRiftBlade : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -58,7 +58,7 @@ namespace ErgaMauter.Content.Items.Weapons
                     hitbox.Width, 
                     hitbox.Height, 
                     DustID.Torch,                       // Change dust type as needed
-                    0f, 0f, 0, Color.DarkRed, 1f
+                    0f, 0f, 0, Color.Green, 1f
                 );
             }
         }
@@ -67,7 +67,7 @@ namespace ErgaMauter.Content.Items.Weapons
         {
             // Optional: Add effects when hitting an enemy
             // Example: Apply a buff or debuff
-            target.AddBuff(BuffID.OnFire, 180);         // Set target on fire for 3 seconds (60 frames = 1 second)
+            target.AddBuff(BuffID.Bleeding, 180);         // Set target on fire for 3 seconds (60 frames = 1 second)
         }
 
         public override void AddRecipes()
@@ -94,7 +94,13 @@ namespace ErgaMauter.Content.Items.Weapons
             // Create aura effects around the player
             if (Main.rand.NextBool(20))
             {
-                Dust.NewDust(player.position, player.width, player.height, DustID.Torch);
+                Dust.NewDust(
+                    player.position,
+                    player.width,
+                    player.height,
+                    DustID.Torch,                           // Change dust type as needed
+                    0f, 0f, 0, Color.Violet, 1f
+                );
             }
         }
         */

@@ -3,4 +3,9 @@ Items: {
 		Tooltip: ""
 		DisplayName: Flaming Fury
 	}
+
+	AmethystRiftBlade: {
+		DisplayName: Amethyst Rift Blade
+		Tooltip: ""
+	}
 }
