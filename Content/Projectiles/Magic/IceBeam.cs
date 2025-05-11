@@ -20,7 +20,7 @@ namespace ErgaMauter.Content.Projectiles.Magic
             Projectile.tileCollide = false;
             Projectile.ignoreWater = true;
 
-            Main.projFrames[Projectile.type] = 8; // 8 vertical frames
+            // Main.projFrames[Projectile.type] = 8; // 8 vertical frames
         }
 
         public override bool PreDraw(ref Color lightColor)
@@ -47,17 +47,32 @@ namespace ErgaMauter.Content.Projectiles.Magic
 
         public override void AI()
         {
-            if (!Projectile.localAI[0].Equals(1f)) // Only run this once
+            // Projectile.frameCounter++;
+            // if (Projectile.frameCounter >= 5)
+            // {
+            //     Projectile.frameCounter = 0;
+            //     Projectile.frame = (Projectile.frame + 1) % Main.projFrames[Projectile.type];
+            // }
+
+            if (!Projectile.localAI[0].Equals(1f))
             {
                 Vector2 target = new Vector2(Projectile.ai[0], Projectile.ai[1]);
                 Vector2 direction = target - Projectile.Center;
                 direction.Normalize();
                 Projectile.velocity = direction * 40f;
+
+                // Adjust depending on sprite orientation (assuming vertical sprite facing UP)
+                Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
+
                 Projectile.localAI[0] = 1f;
+            }
+            else
+            {
+                Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
             }
 
             // Rotation (spinning)
-            Projectile.rotation += 0.4f;
+            // Projectile.rotation += 0.4f;
 
             // Beam effects
             Lighting.AddLight(Projectile.Center, 0.1f, 0.4f, 1f);

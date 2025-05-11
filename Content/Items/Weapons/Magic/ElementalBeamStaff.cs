@@ -30,12 +30,12 @@ namespace ErgaMauter.Content.Items.Weapons.Magic
                                 copper: 83
                             );
 
-            Item.damage = 37;
+            Item.damage = 28;
             Item.DamageType = DamageClass.Magic;
             Item.useStyle = ItemUseStyleID.HoldUp;
-            Item.useTime = 8;
+            Item.useTime = 2;
             Item.useAnimation = Item.useTime;
-            Item.knockBack = 7.2f;
+            Item.knockBack = 0f;
             Item.crit = 8;
 
             Item.UseSound = SoundID.Item20;
@@ -43,7 +43,7 @@ namespace ErgaMauter.Content.Items.Weapons.Magic
 
             Item.shoot = ModContent.ProjectileType<Projectiles.Magic.FireBeam>();
             Item.shootSpeed = 0f; // Not used since beam spawns from sky
-            Item.mana = 5;
+            Item.mana = 1;
 
             Item.scale = 1.3f;                            // Size scaling of the weapon (visual only)
             Item.maxStack = 1;                          // Most weapons can't stack
@@ -74,20 +74,14 @@ namespace ErgaMauter.Content.Items.Weapons.Magic
             return false;
         }
 
-
         public override void AddRecipes()
         {
             Recipe primaryRecipe = CreateRecipe();
-            primaryRecipe.AddIngredient(ItemID.PlatinumBar, 8);
-            primaryRecipe.AddIngredient(ItemID.FrostCore);
-            primaryRecipe.AddIngredient(1354); // Flask of Fire internal id
-            primaryRecipe.AddTile(TileID.MythrilAnvil);
+            primaryRecipe.AddIngredient(ItemID.PlatinumBar, 12);
+            primaryRecipe.AddIngredient(ItemID.MeteoriteBar, 8);
+            primaryRecipe.AddIngredient(ItemID.FrostCore, 8);
+            primaryRecipe.AddTile(TileID.Anvils);
             primaryRecipe.Register();
-
-            Recipe testRecipe = CreateRecipe();
-            testRecipe.AddIngredient(ItemID.Wood, 8);
-            testRecipe.AddTile(TileID.Anvils);
-            testRecipe.Register();
         }
     }
 }
