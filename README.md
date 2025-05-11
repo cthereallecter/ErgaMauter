@@ -1,6 +1,6 @@
 # Erga Mauter Trials
 
-![Mod Version](https://img.shields.io/badge/version-0.1.0.3-blue)
+![Mod Version](https://img.shields.io/badge/version-0.1.0.4-blue)
 ![tModLoader](https://img.shields.io/badge/tModLoader-2025.3.3.1-orange)
 ![Terraria](https://img.shields.io/badge/terraria-1.4.4.9-green)
 
