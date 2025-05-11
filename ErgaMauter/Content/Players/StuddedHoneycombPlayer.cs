@@ -20,7 +20,7 @@ namespace ErgaMauter.Content.Items.Accessories
             if (!comboActive)
                 return;
 
-            int beeCount = Main.rand.Next(2, 5); // Normally 1-3, we boost this a bit
+            int beeCount = Main.rand.Next(3, 5); // Normally 1-3, we boost this a bit
             int extraBees = (int)(beeCount * 0.5f); // 50% more bees
             beeCount += extraBees;
 

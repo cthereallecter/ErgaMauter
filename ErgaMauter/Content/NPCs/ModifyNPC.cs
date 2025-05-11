@@ -13,7 +13,22 @@ namespace ErgaMauter.Content.NPCs
         {
             switch (npc.type)
             {
+                case 507: // Angry Tumbler
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CursedCogwheel>(), 40)); // 2.5%
+                    break;
+                case NPCID.CaveBat:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<BatwingTrinket>(), 40)); // 2.5%
+                    break;
                 case NPCID.EyeofCthulhu:
+                    break;
+                case NPCID.FaceMonster:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CrimsonFangPendant>(), 40)); // 2.5%
+                    break;
+                case NPCID.GiantFungiBulb:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SporelingSash>(), 33)); // ~3.03%
+                    break;
+                case NPCID.IceSlime:
+                    npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<SnowbindBrooch>(), 40)); // 2.5%
                     break;
                 case NPCID.KingSlime:
                     break;

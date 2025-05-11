@@ -1,6 +1,7 @@
 displayName = Erga Mauter Trials
 author = C. Lecter
-version = 0.1.0.1
+version = 0.1.0.3
 homepage = https://github.com/cthereallecter/ErgaMauter
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
+includePDB = false
 includeSource = false

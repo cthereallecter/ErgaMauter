@@ -37,9 +37,55 @@ Items: {
 			- Creates a honey aura
 			'''
 	}
+
+	FondChampPainting: {
+		DisplayName: Fond Champ Painting
+		Tooltip: ""
+	}
+
+	OtherlandishJourneyPainting: {
+		DisplayName: Otherlandish Journey Painting
+		Tooltip: ""
+	}
+
+	OtherlandishJourneyItem: {
+		DisplayName: Otherlandish Journey Item
+		Tooltip: ""
+	}
+
+	BatwingTrinket: {
+		DisplayName: Batwing Trinket
+		Tooltip: ""
+	}
+
+	CrimsonFangPendant: {
+		DisplayName: Crimson Fang Pendant
+		Tooltip: ""
+	}
+
+	CursedCogwheel: {
+		DisplayName: Cursed Cogwheel
+		Tooltip: ""
+	}
+
+	SnowbindBrooch: {
+		DisplayName: Snowbind Brooch
+		Tooltip: ""
+	}
+
+	SporelingSash: {
+		DisplayName: Sporeling Sash
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
 	FireBeam.DisplayName: Fire Beam
 	IceBeam.DisplayName: Ice Beam
+}
+
+NPCs: {
+	FloatingFlameFairy.DisplayName: Floating Flame Fairy
+	FloatingIceFairy.DisplayName: Floating Ice Fairy
+	FloatingLifeFairy.DisplayName: Floating Life Fairy
 }
