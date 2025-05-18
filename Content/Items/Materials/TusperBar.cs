@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Metalurgy.Content.Items.Materials
+namespace Metallurgy.Content.Items.Materials
 {
     public class TusperBar : ModItem
     {

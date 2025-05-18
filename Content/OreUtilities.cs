@@ -1,11 +1,13 @@
-﻿using System.Collections.Generic;
+﻿// Created: v0.1.0.5
+
+using System.Collections.Generic;
 
 using Microsoft.Xna.Framework;
 
 using Terraria;
 using Terraria.ID;
 
-namespace Metalurgy.Common
+namespace Metallurgy.Common
 {
     public static class OreUtilities
     {
@@ -46,14 +48,18 @@ namespace Metalurgy.Common
             }
         }
 
-        public static void TryReplaceInVeins(int targetTileType, int oreType, int minVeinSize, float transformChance, float targetRatio)
+        public static void TryReplaceInVeins(int targetTileType, int oreType, int minVeinSize, float transformChance, float targetRatio,
+                                int minHeight = 0, int maxHeight = int.MaxValue)
         {
             HashSet<Point> visited = new();
             List<List<Point>> veins = new();
 
+            minHeight = Utils.Clamp(minHeight, 0, Main.maxTilesY - 1);
+            maxHeight = Utils.Clamp(maxHeight, minHeight + 1, Main.maxTilesY);
+
             for (int x = 50; x < Main.maxTilesX - 50; x++)
             {
-                for (int y = 50; y < Main.maxTilesY - 150; y++)
+                for (int y = minHeight; y < maxHeight - 1; y++)
                 {
                     Point p = new(x, y);
                     if (!visited.Contains(p) && Main.tile[x, y].HasTile && Main.tile[x, y].TileType == targetTileType)
@@ -76,6 +82,9 @@ namespace Metalurgy.Common
                 for (int i = 0; i < vein.Count && placed < targetCount; i++)
                 {
                     Point p = vein[WorldGen.genRand.Next(vein.Count)];
+                    if (p.Y < minHeight || p.Y > maxHeight)
+                        continue;
+
                     Tile tile = Main.tile[p.X, p.Y];
                     if (tile.HasTile && tile.TileType == targetTileType && WorldGen.genRand.Next(12) == 0)
                     {
@@ -85,6 +94,7 @@ namespace Metalurgy.Common
                 }
             }
         }
+
 
         public static void TryPlaceOre(int x, int y, int oreType)
         {

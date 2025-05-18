@@ -1,13 +1,13 @@
 ﻿// Created: v0.1.0.5
 
-using Metalurgy.Content.Items.Materials;
+using Metallurgy.Content.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.UI;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Metalurgy.Content.Items.Tools
+namespace Metallurgy.Content.Items.Tools
 {
     public class TarnenPickaxe : ModItem
     {

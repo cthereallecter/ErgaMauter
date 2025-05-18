@@ -1,7 +1,7 @@
 ﻿// Created: v0.1.0.5
 
-using Metalurgy.Content.Items.Materials;
-using Metalurgy.Content.NPCs;
+using Metallurgy.Content.Items.Materials;
+using Metallurgy.Content.NPCs;
 
 using Terraria;
 using Terraria.ID;
@@ -9,7 +9,7 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 
-namespace Metalurgy.Content.Items.Weapons
+namespace Metallurgy.Content.Items.Weapons
 {
 
     // Shared identifier for poisoned enemies
@@ -46,7 +46,6 @@ namespace Metalurgy.Content.Items.Weapons
         {
             CreateRecipe()
                 .AddIngredient(ModContent.ItemType<TusperBar>(), 12)
-                .AddIngredient(46) // Light's Bane
                 .AddIngredient(ModContent.ItemType<TarnenBroadsword>())
                 .AddTile(TileID.Anvils)
                 .Register();
@@ -64,33 +63,10 @@ namespace Metalurgy.Content.Items.Weapons
 
                     // Tag with Tusper poison metadata
                     target.GetGlobalNPC<TusperPoisonTracker>().SetTusperPoison(player.whoAmI);
-
-                    SpawnToxicDust(player);
                 }
             }
 
             return base.UseItem(player);
-        }
-
-        // This method spawns toxic dust effect when swinging the sword
-        private void SpawnToxicDust(Player player)
-        {
-            // Play sound effect for the toxic waste dust effect
-            SoundEngine.PlaySound(SoundID.Item29, player.position); // Example sound of a "toxic spill"
-
-            // Create a dust effect matching the green and purple theme
-            for (int i = 0; i < 20; i++) // Number of dusts to spawn
-            {
-                // Spawn dust with a toxic green and purple color
-                Dust dust = Dust.NewDustDirect(player.position, player.width, player.height, DustID.GreenTorch, 0f, 0f, 0, new Color(100, 255, 100), 1.5f);
-                dust.noGravity = true; // Make it float in the air like toxic waste dust
-                dust.velocity *= 2f; // Make the dust travel outward a bit more
-
-                // Optionally mix green with purple tones for a more "toxic" feel
-                Dust dust2 = Dust.NewDustDirect(player.position, player.width, player.height, DustID.PurpleTorch, 0f, 0f, 0, new Color(180, 80, 255), 1.2f);
-                dust2.noGravity = true;
-                dust2.velocity *= 2f;
-            }
         }
     }
 }

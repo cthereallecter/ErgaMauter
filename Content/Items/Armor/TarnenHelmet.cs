@@ -1,12 +1,12 @@
 ﻿// Created: v0.1.0.5
 
-using Metalurgy.Content.Items.Materials;
+using Metallurgy.Content.Items.Materials;
 
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Metalurgy.Content.Items.Armor
+namespace Metallurgy.Content.Items.Armor
 {
     [AutoloadEquip(EquipType.Head)]
     public class TarnenHelmet : ModItem
@@ -50,7 +50,7 @@ namespace Metalurgy.Content.Items.Armor
         public override void Load()
         {
             // Register the head texture (_Head)
-            EquipLoader.AddEquipTexture(Mod, "Metalurgy/Content/Items/Armor/TarnenHelmet_Head", EquipType.Head, this, "TarnenHelmet_Head");
+            EquipLoader.AddEquipTexture(Mod, "Metallurgy/Content/Items/Armor/TarnenHelmet_Head", EquipType.Head, this, "TarnenHelmet_Head");
         }
     }
 }

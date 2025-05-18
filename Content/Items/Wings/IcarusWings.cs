@@ -4,9 +4,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-using Metalurgy.Content.Items.Materials;
+using Metallurgy.Content.Items.Materials;
 
-namespace Metalurgy.Content.Items.Wings
+namespace Metallurgy.Content.Items.Wings
 {
     public class IcarusWings : ModItem
     {
@@ -29,7 +29,7 @@ namespace Metalurgy.Content.Items.Wings
         {
             if (!Main.dedServ)
             {
-                EquipLoader.AddEquipTexture(Mod, "Metalurgy/Content/Items/Wings/IcarusWings_Wings", EquipType.Wings, this, "IcarusWings_Wings");
+                EquipLoader.AddEquipTexture(Mod, "Metallurgy/Content/Items/Wings/IcarusWings_Wings", EquipType.Wings, this, "IcarusWings_Wings");
             }
         }
 

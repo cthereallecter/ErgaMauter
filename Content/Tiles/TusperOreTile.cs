@@ -1,11 +1,13 @@
-﻿using Microsoft.Xna.Framework;
+﻿// Created: v0.1.0.5
+
+using Microsoft.Xna.Framework;
 
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Localization;
 
-namespace Metalurgy.Content.Tiles
+namespace Metallurgy.Content.Tiles
 {
     public class TusperOreTile : ModTile
     {
@@ -18,12 +20,12 @@ namespace Metalurgy.Content.Tiles
             Main.tileShine2[Type] = true;
             Main.tileOreFinderPriority[Type] = 410;
 
-            AddMapEntry(new Color(200, 150, 100), Language.GetText("Mods.Metalurgy.Tiles.TusperOreTile.MapEntry"));
+            AddMapEntry(new Color(200, 150, 100), Language.GetText("Mods.Metallurgy.Tiles.TusperOreTile.MapEntry"));
 
-            DustType = DustID.Copper;
+            DustType = DustID.Cobalt;
             HitSound = SoundID.Tink;
             MineResist = 2f;
-            MinPick = 35;
+            MinPick = 40;
         }
 
         public override bool CanExplode(int i, int j) => true;

@@ -1,9 +1,11 @@
-﻿using Metalurgy.Content.Items.Weapons;
+﻿// Created: v0.1.0.5
+
+using Metallurgy.Content.Items.Weapons;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Metalurgy.Content.NPCs
+namespace Metallurgy.Content.NPCs
 {
     public class TusperPoisonTracker : GlobalNPC
     {
@@ -40,7 +42,7 @@ namespace Metalurgy.Content.NPCs
 
                     // Heal player for poison damage dealt (1:1 ratio)
                     player.statLife += lifeLost;
-                    player.HealEffect(lifeLost, true);
+                    // player.HealEffect(lifeLost, true);
                 }
             }
         }

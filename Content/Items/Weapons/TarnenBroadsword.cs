@@ -1,12 +1,12 @@
 ﻿// Created: v0.1.0.5
 
-using Metalurgy.Content.Items.Materials;
+using Metallurgy.Content.Items.Materials;
 
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Metalurgy.Content.Items.Weapons
+namespace Metallurgy.Content.Items.Weapons
 {
     public class TarnenBroadsword : ModItem
     {

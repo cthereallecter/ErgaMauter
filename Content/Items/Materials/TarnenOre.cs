@@ -1,12 +1,12 @@
 ﻿// Created: v0.1.0.5
 
-using Metalurgy.Content.Tiles;
+using Metallurgy.Content.Tiles;
 
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Metalurgy.Content.Items.Materials
+namespace Metallurgy.Content.Items.Materials
 {
     public class TarnenOre : ModItem
     {

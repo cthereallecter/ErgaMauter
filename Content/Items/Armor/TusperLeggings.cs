@@ -1,12 +1,12 @@
 ﻿// Created: v0.1.0.5
 
-using Metalurgy.Content.Items.Materials;
+using Metallurgy.Content.Items.Materials;
 
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Metalurgy.Content.Items.Armor
+namespace Metallurgy.Content.Items.Armor
 {
     [AutoloadEquip(EquipType.Legs)]
     public class TusperLeggings : ModItem
@@ -37,7 +37,7 @@ namespace Metalurgy.Content.Items.Armor
         public override void Load()
         {
             // Register the legs texture (_Legs)
-            EquipLoader.AddEquipTexture(Mod, "Metalurgy/Content/Items/Armor/TusperLeggings_Legs", EquipType.Legs, this, "TusperLeggings_Legs");
+            EquipLoader.AddEquipTexture(Mod, "Metallurgy/Content/Items/Armor/TusperLeggings_Legs", EquipType.Legs, this, "TusperLeggings_Legs");
         }
     }
 }
